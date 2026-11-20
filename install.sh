@@ -7,7 +7,7 @@ pkg install -y git python clang libffi openssl rust
 
 # unduh repo
 git clone https://github.com/skyyror/ddos.git
-cd REPO
+cd ddos
 
 # install dependensi
 pip install -r requirements.txt
