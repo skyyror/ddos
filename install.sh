@@ -1,17 +1,16 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 set -e
 
-# install kebutuhan sistem
-apt update && apt install -y git python3 python3-pip python3-venv
+# kebutuhan sistem (pakai pkg, bukan apt)
+pkg update -y && pkg upgrade -y
+pkg install -y git python clang libffi openssl rust
 
 # unduh repo
-git clone https://github.com/skyyror/ddos
+git clone https://github.com/skyyror/ddos.git
 cd REPO
 
-# buat venv & install dependensi
-python3 -m venv venv
-source venv/bin/activate
+# install dependensi
 pip install -r requirements.txt
 
-# jalankan file utama
-python3 ddos.py
+# jalankan
+python ddos.py
