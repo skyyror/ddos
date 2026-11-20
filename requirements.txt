@@ -1,0 +1,32 @@
+# ────────────────────────────────────────────────────────
+#  ddos-tool — requirements.txt
+# ────────────────────────────────────────────────────────
+#  Core berjalan hanya dengan stdlib Python 3.8+.
+#  Paket di bawah OPSIONAL — pasang untuk fitur tambahan.
+#
+#  Termux:
+#    pkg install python
+#    pip install -r requirements.txt
+#
+#  Linux/macOS:
+#    python3 -m venv .venv && source .venv/bin/activate
+#    pip install -r requirements.txt
+# ────────────────────────────────────────────────────────
+
+# Richer terminal output (progress bar, tabel, warna fallback)
+rich>=13.0.0
+
+# Banner ASCII otomatis, multi-font
+pyfiglet>=0.8.post1
+
+# HTTP client untuk recon / proxy health-check (fitur "x" cek proxy hidup)
+requests>=2.31.0
+
+# DNS worker fallback untuk record type eksotis
+dnspython>=2.4.0
+
+# Async HTTP flood (opsional — lebih cepat dari thread pool di beban berat)
+aiohttp>=3.9.0
+
+# Windows ANSI fallback (no-op di Termux/Linux)
+colorama>=0.4.6; platform_system == "Windows"
