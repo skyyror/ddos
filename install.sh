@@ -13,4 +13,4 @@ cd REPO
 pip install -r requirements.txt
 
 # jalankan
-python ddos.py
+python3 ddos.py
